@@ -1,11 +1,11 @@
 package example
 
-//import io.scalajs.nodejs.os
-import util._
+import utils._
 import example.facade._
+import scala.util.chaining._
 
-object Main {
-  def main(args: Array[String]): Unit = {
+object Main:
+  def main(args: Array[String]): Unit = time {
     println("Hello world scalajs on nodejs")
     println("args:")
     args.foreach(println)
@@ -14,6 +14,5 @@ object Main {
 
     nodejs.OS
       .arch()
-      .|>(arch => println(s"""os arch is: $arch"""))
+      .pipe(arch => println(s"""os arch is: $arch"""))
   }
-}

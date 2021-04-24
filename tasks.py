@@ -10,7 +10,7 @@ def compile(c):
 @task(compile)
 def run_raw(c):
     """run with node"""
-    c.run('node target/scala-2.13/scalajs-nodejs-example-fastopt/main.js')
+    c.run('node target/scala-3.0.0-RC3/scalajs-nodejs-example-fastopt/main.js')
 
 
 @task
@@ -22,5 +22,4 @@ def run(c):
 @task(default=True)
 def usage(c):
     """Usage"""
-
     c.run('invoke -l')
