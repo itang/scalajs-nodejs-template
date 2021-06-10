@@ -10,7 +10,7 @@ def compile(c):
 @task(compile)
 def run_raw(c):
     """run with node"""
-    c.run('node target/scala-3.0.0-RC3/scalajs-nodejs-example-fastopt/main.js')
+    c.run('node target/scala-3.0.1-RC1/scalajs-nodejs-example-fastopt/main.js')
 
 
 @task
